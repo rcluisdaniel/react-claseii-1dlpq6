@@ -18,19 +18,24 @@ class Blog extends Component{
       console.log(data)
       this.setState({
         articles: data
-      })
-      
+      })      
     })
   }
 
   render(){
     return(
       <div>
-        {
-          this.state.articles.map((article)=>{
-            return <div classname="card" style ={backgroundColor:'red',color:'yelo'}><p>{article.title}</p></div>
-          })
-        }
+      {
+        this.state.articles.map((article)=>{
+          return ( //se coloca parentesis si se trabaja con varias lineas
+            <div className = "card" style ={{backgroundColor:'red',color:'yellow'}}>
+            <p>
+                {article.title}
+            </p> 
+          </div>
+          )
+        })
+      }
       </div>
     )
   }
